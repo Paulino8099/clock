@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#C4C4C4">
+    <meta name="msaplication-navbutton-color" content="#C4C4C4">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#C4C4C4">
+
+    <link rel="icon" type="img/x-icon" href="PNG/reloj.png">
+    <link rel="stylesheet" href="CSS/body.css">
+
+    <title>Clock</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-navBar">
+            <button class="btn-chronometer">Chronometer</button>
+            <button class="btn-clock">Clock</button>
+        </div>
+
+
+        <!-- Container Chronometer -->
+        <div class="container-chronometer">
+            <div class="container-accountant-chronometer">
+                <div class="content-accountant-chronometer">
+                    <h1 class="hours-chronometer">00</h1>
+                    <div class="points-first-chronometer">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h1 class="minutes-chronometer">00</h1>
+                    <div class="points-seconds-chronometer">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h1 class="seconds-chronometer">00</h1>
+                </div>
+            </div>
+            <div class="container-buttons">
+                <!-- replay -->
+                <svg class="btn-replay" viewBox="0 0 24 24">
+                    <g>
+                        <rect fill="none" height="24" width="24" />
+                        <rect fill="none" height="24" width="24" />
+                        <rect fill="none" height="24" width="24" />
+                    </g>
+                    <g>
+                        <g />
+                        <path
+                            d="M12,5V1L7,6l5,5V7c3.31,0,6,2.69,6,6s-2.69,6-6,6s-6-2.69-6-6H4c0,4.42,3.58,8,8,8s8-3.58,8-8S16.42,5,12,5z" />
+                    </g>
+                </svg>
+                <!-- pause -->
+                <svg class="btn-pause" viewBox="0 0 24 24">
+                    <g>
+                        <rect fill="none" height="24" width="24" />
+                    </g>
+                    <g>
+                        <path
+                            d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8 S16.41,20,12,20z M9.5,16.5l7-4.5l-7-4.5V16.5z" />
+                    </g>
+                </svg>
+                <!-- play -->
+                <svg class="btn-pause" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                        d="M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z" />
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Container Clock -->
+        <div class="container-clock">
+            <div class="container-accountant-clock">
+                <div class="content-accountant-clock">
+                    <h1 class="hours-clock">05</h1>
+                    <div class="points-first-clock">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h1 class="minutes-clock">35</h1>
+                    <div class="points-seconds-clock">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h1 class="seconds-clock">09</h1>
+                </div>
+            </div>
+
+            <!-- container date -->
+            <div class="container-date">September 12 2021</div>
+        </div>
+    </div>
+
+    <script src="JS/body.js"></script>
+    <script src="JS/clock.js"></script>
+    <script src="JS/cronometer.js"></script>
+</body>
+
+</html>

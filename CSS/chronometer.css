@@ -1,0 +1,351 @@
+.container-chronometer {
+  place-self: center;
+  width: 90%;
+  height: 100%;
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 6;
+  grid-row: 2/8;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (auto)[8];
+      grid-template-rows: repeat(8, auto);
+}
+
+.container-chronometer.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.container-chronometer .container-accountant-chronometer {
+  place-items: center;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1/5;
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer {
+  place-items: center;
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer .hours-chronometer {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 10px;
+  background: var(--color_white);
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer .minutes-chronometer {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 10px;
+  background: var(--color_white);
+}
+
+.container-chronometer .container-accountant-chronometer .content-accountant-chronometer .seconds-chronometer {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+}
+
+.container-chronometer .container-buttons {
+  place-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 4;
+  grid-row: 5/9;
+}
+
+.container-chronometer .container-buttons svg {
+  margin: 0 50px;
+  -webkit-box-shadow: 0 0 10px #00000040;
+          box-shadow: 0 0 10px #00000040;
+  border-radius: 50%;
+  padding: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container-chronometer .container-buttons svg:hover {
+  opacity: .8;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+  cursor: pointer;
+}
+
+.container-chronometer .container-buttons svg:active {
+  -webkit-transition: 0s;
+  transition: 0s;
+  opacity: 1;
+  -webkit-box-shadow: 0 0 10px #00000040;
+          box-shadow: 0 0 10px #00000040;
+}
+
+@media (max-width: 850px) {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer {
+    place-items: center;
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .hours-chronometer {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 10px;
+    background: var(--color_white);
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .minutes-chronometer {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 10px;
+    background: var(--color_white);
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .seconds-chronometer {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  }
+  .container-chronometer .container-buttons {
+    place-self: center;
+    margin-top: -100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1/9;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 4;
+    grid-row: 5/9;
+  }
+  .container-chronometer .container-buttons svg {
+    margin: 0 50px;
+    -webkit-box-shadow: 0 0 10px #00000040;
+            box-shadow: 0 0 10px #00000040;
+    border-radius: 50%;
+    padding: 5px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .container-chronometer .container-buttons svg:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0 0 10px #00000040;
+            box-shadow: 0 0 10px #00000040;
+    cursor: pointer;
+  }
+  .container-chronometer .container-buttons svg:active {
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: .5;
+    -webkit-box-shadow: 0 0 10px #00000040;
+            box-shadow: 0 0 10px #00000040;
+  }
+}
+
+@media (max-width: 450px) {
+  .container-chronometer .container-accountant .content-accountant {
+    place-items: center;
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container-chronometer .container-accountant .content-accountant .hours-chronometer {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  }
+  .container-chronometer .container-accountant .content-accountant .points-first-chronometer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-chronometer .container-accountant .content-accountant .points-first-chronometer span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 10px;
+    background: var(--color_white);
+  }
+  .container-chronometer .container-accountant .content-accountant .minutes-chronometer {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  }
+  .container-chronometer .container-accountant .content-accountant .points-seconds-chronometer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-chronometer .container-accountant .content-accountant .points-seconds-chronometer span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 10px;
+    background: var(--color_white);
+  }
+  .container-chronometer .container-accountant .content-accountant .seconds-chronometer {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  }
+  .container-chronometer .container-buttons svg {
+    margin: 0 25px;
+    -webkit-box-shadow: 0 0 10px #00000040;
+            box-shadow: 0 0 10px #00000040;
+    border-radius: 50%;
+    padding: 5px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .container-chronometer .container-buttons svg:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0 0 10px #00000040;
+            box-shadow: 0 0 10px #00000040;
+    cursor: pointer;
+  }
+  .container-chronometer .container-buttons svg:active {
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: .5;
+    -webkit-box-shadow: 0 0 10px #00000040;
+            box-shadow: 0 0 10px #00000040;
+  }
+}
+/*# sourceMappingURL=chronometer.css.map */
