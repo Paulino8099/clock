@@ -26,6 +26,7 @@ function activeClock() {
 }
 
 
+// hora
 getTime();
 function getTime() {
     let hours = document.querySelector('.hours-clock');
@@ -55,6 +56,7 @@ function getTime() {
     }
 } setInterval(getTime, 1000);
 
+// fecha
 getDate();
 function getDate() {
     let time = new Date();

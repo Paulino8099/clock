@@ -259,23 +259,23 @@
 }
 
 @media (max-width: 450px) {
-  .container-chronometer .container-accountant .content-accountant {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer {
     place-items: center;
     margin-top: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .container-chronometer .container-accountant .content-accountant .hours-chronometer {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .hours-chronometer {
     font-size: 4rem;
     font-weight: 900;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
             box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
   }
-  .container-chronometer .container-accountant .content-accountant .points-first-chronometer {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -284,23 +284,23 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container-chronometer .container-accountant .content-accountant .points-first-chronometer span {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer span {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     margin: 10px;
     background: var(--color_white);
   }
-  .container-chronometer .container-accountant .content-accountant .minutes-chronometer {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .minutes-chronometer {
     font-size: 4rem;
     font-weight: 900;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
             box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
   }
-  .container-chronometer .container-accountant .content-accountant .points-seconds-chronometer {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -309,18 +309,18 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container-chronometer .container-accountant .content-accountant .points-seconds-chronometer span {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer span {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     margin: 10px;
     background: var(--color_white);
   }
-  .container-chronometer .container-accountant .content-accountant .seconds-chronometer {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .seconds-chronometer {
     font-size: 4rem;
     font-weight: 900;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
             box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
