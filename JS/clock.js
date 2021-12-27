@@ -33,19 +33,27 @@ function getTime() {
     let minutes = document.querySelector('.minutes-clock');
     let seconds = document.querySelector('.seconds-clock');
     let time = new Date();
+    let timeHours = time.getHours();
 
     // hours
-    if (time.getHours() <= 9) {
-        hours.innerHTML = '0' + time.getHours();
-    } else {
-        hours.innerHTML = time.getHours();
+    // Cuando el contador de horas registre un número mayor a 12 al contador "horas" se le restrá 12
+    if (timeHours > 12) {
+        timeHours -= 12;
+        hours.innerHTML = `0${timeHours}`;
     }
-    if (time.getHours() > 12) {
-        hours.innerHTML = `0${time.getHours() - 12}`;
-        // si el contador horas marca un número mayor a 10 se le va a retirar el 0
-        if (time.getHours() > 10) {
-            hours.innerHTML = `${time.getHours() - 12}`;
-        }
+    // si el contador "horas" es igual a 0 con las siguientes indicaciones convertirá su valor a 1
+    if (timeHours == 0 || timeHours == 00) {
+        timeHours = 1;
+    }
+    // si el contador horas marca un número mayor a 10 se le va a retirar el 0
+    if (timeHours > 10) {
+        hours.innerHTML = `${timeHours - 12}`;
+    }
+    // si el contador "horas" es menor a 10 es decir que tiene un número de entre 1-9 se le agregará un cero delante
+    if (timeHours < 10) {
+        hours.innerHTML = '0' + timeHours;
+    } else {
+        hours.innerHTML = timeHours;
     }
 
     // minutes
