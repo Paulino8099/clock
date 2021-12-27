@@ -126,9 +126,21 @@ body .container .container-navBar .btn-clock.active {
 }
 
 body .container .container-colors {
-  justify-self: start;
-  -ms-flex-item-align: center;
-      align-self: center;
+  background: transparent;
+  -webkit-box-shadow: 0 0 10px #ffffff90;
+          box-shadow: 0 0 10px #ffffff90;
+  position: absolute;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 10px;
+  z-index: 200;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 2px solid #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,20 +151,35 @@ body .container .container-colors {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 8;
-  grid-row: 1/9;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8/9;
+}
+
+body .container .container-colors.active {
+  margin: 0 0 55px 50px;
+}
+
+body .container .container-colors.active span {
+  opacity: 1;
+  pointer-events: visible;
+  -webkit-transform: rotate(calc(var(--i) * (360deg/10))) translateY(50px);
+          transform: rotate(calc(var(--i) * (360deg/10))) translateY(50px);
 }
 
 body .container .container-colors span {
+  position: absolute;
   -webkit-box-shadow: 0 0 10px #00000080;
           box-shadow: 0 0 10px #00000080;
-  margin: 5px;
   z-index: 100;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .6s ease all;
+  transition: .6s ease all;
 }
 
 body .container .container-colors span:hover {
@@ -175,7 +202,7 @@ body .container .container-colors span.active {
 @media (max-width: 600px) {
   body .container .container-navBar {
     background: var(--color_white);
-    align-self: flex-end;
+    align-self: flex-start;
     width: 100%;
     border-radius: 10px;
     -webkit-box-shadow: none;
@@ -190,9 +217,12 @@ body .container .container-colors span.active {
     -ms-grid-column: 1;
     -ms-grid-column-span: 8;
     grid-column: 1/9;
-    -ms-grid-row: 8;
+    -ms-grid-row: 1;
     -ms-grid-row-span: 1;
-    grid-row: 8/9;
+    grid-row: 1/2;
+  }
+  body .container .container-navBar button:hover {
+    opacity: 1;
   }
   body .container .container-navBar .btn-chronometer {
     color: var(--color_grey2);
@@ -229,35 +259,60 @@ body .container .container-colors span.active {
     grid-row: 1/2;
   }
   body .container .container-colors {
-    justify-self: center;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    background: transparent;
+    -webkit-box-shadow: 0 0 10px #ffffff90;
+            box-shadow: 0 0 10px #ffffff90;
+    position: absolute;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 10px;
+    z-index: 200;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: 2px solid #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
-    grid-column: 1/9;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
     -ms-grid-row: 8;
     -ms-grid-row-span: 1;
     grid-row: 8/9;
   }
+  body .container .container-colors.active {
+    margin: 0 0 55px 50px;
+  }
+  body .container .container-colors.active span {
+    opacity: 1;
+    pointer-events: visible;
+    -webkit-transform: rotate(calc(var(--i) * (360deg/10))) translateY(50px);
+            transform: rotate(calc(var(--i) * (360deg/10))) translateY(50px);
+  }
   body .container .container-colors span {
+    position: absolute;
     -webkit-box-shadow: 0 0 10px #00000080;
             box-shadow: 0 0 10px #00000080;
-    margin: 5px;
     z-index: 100;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: .6s ease all;
+    transition: .6s ease all;
   }
   body .container .container-colors span:hover {
-    opacity: .5;
+    opacity: .8;
     -webkit-box-shadow: 0 0 15px #ffffff;
             box-shadow: 0 0 15px #ffffff;
   }

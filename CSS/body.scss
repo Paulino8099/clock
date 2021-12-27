@@ -38,7 +38,7 @@ body {
 
 	display: grid;
 	.container {
-        box-shadow: 0 0 25px #ffffff40;
+		box-shadow: 0 0 25px #ffffff40;
 		border-radius: 5px;
 		background: var(--color_grey2);
 		width: 80%;
@@ -103,28 +103,49 @@ body {
 			}
 		}
 		.container-colors {
-			justify-self: start;
-			align-self: center;
+			background: transparent;
+			box-shadow: 0 0 10px #ffffff90;
+			position: absolute;
+			align-self: flex-end;
+			margin: 10px ;
+			z-index: 200;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			cursor: pointer;
+			outline: 2px solid #fff;
+			transition: .5s;
 
 			display: flex;
 			flex-direction: column;
 			grid-column: 1/2;
-			grid-row: 1/9;
+			grid-row: 8/9;
+			&.active {
+				margin: 0 0 55px 50px;
+				span {
+					opacity: 1;
+					pointer-events: visible;
+					transform: rotate(calc(var(--i) * (360deg/10))) translateY(50px);
+				}
+			}
 			span {
-                box-shadow: 0 0 10px #00000080;
-				margin: 5px;
+				position: absolute;
+				box-shadow: 0 0 10px #00000080;
 				z-index: 100;
 				width: 25px;
 				height: 25px;
 				border-radius: 50%;
 				cursor: pointer;
+				opacity: 0;
+				pointer-events: none;
+				transition: .6s ease all;
 				&:hover {
 					opacity: .8;
-                    box-shadow: 0 0 15px #ffffff;
+					box-shadow: 0 0 15px #ffffff;
 				}
-                &.active {
-                    outline: 2px solid #fff;
-                }
+				&.active {
+					outline: 2px solid #fff;
+				}
 			}
 		}
 	}
@@ -138,7 +159,7 @@ body {
 		.container {
 			.container-navBar {
 				background: var(--color_white);
-				align-self: flex-end;
+				align-self: flex-start;
 				width: 100%;
 				border-radius: 10px;
 				box-shadow: none;
@@ -148,7 +169,12 @@ body {
 				grid-template-columns: 2;
 				grid-template-rows: 2;
 				grid-column: 1/9;
-				grid-row: 8/9;
+				grid-row: 1/2;
+				button {
+					&:hover {
+						opacity: 1;
+					}
+				}
 				.btn-chronometer {
 					color: var(--color_grey2);
 					margin: 10px 20px;
@@ -180,31 +206,52 @@ body {
 					grid-row: 1/2;
 				}
 			}
-            .container-colors {
-                justify-self: center;
-                align-self: flex-start;
-    
-                display: flex;
-                flex-direction: row;
-                grid-column: 1/9;
-                grid-row: 8/9;
-                span {
-                    box-shadow: 0 0 10px #00000080;
-                    margin: 5px;
-                    z-index: 100;
-                    width: 25px;
-                    height: 25px; 
-                    border-radius: 50%;
-                    cursor: pointer;
-                    &:hover {
-                        opacity: .5;
-                        box-shadow: 0 0 15px #ffffff;
-                    }
-                    &.active {
-                        outline: 2px solid #fff;
-                    }
-                }
-            }
+			.container-colors {
+				background: transparent;
+				box-shadow: 0 0 10px #ffffff90;
+				position: absolute;
+				align-self: flex-end;
+				margin: 10px ;
+				z-index: 200;
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				cursor: pointer;
+				outline: 2px solid #fff;
+				transition: .5s;
+	
+				display: flex;
+				flex-direction: column;
+				grid-column: 1/2;
+				grid-row: 8/9;
+				&.active {
+					margin: 0 0 55px 50px;
+					span {
+						opacity: 1;
+						pointer-events: visible;
+						transform: rotate(calc(var(--i) * (360deg/10))) translateY(50px);
+					}
+				}
+				span {
+					position: absolute;
+					box-shadow: 0 0 10px #00000080;
+					z-index: 100;
+					width: 25px;
+					height: 25px;
+					border-radius: 50%;
+					cursor: pointer;
+					opacity: 0;
+					pointer-events: none;
+					transition: .6s ease all;
+					&:hover {
+						opacity: .8;
+						box-shadow: 0 0 15px #ffffff;
+					}
+					&.active {
+						outline: 2px solid #fff;
+					}
+				}
+			}
 		}
 	}
 }

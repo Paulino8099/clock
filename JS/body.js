@@ -2,8 +2,8 @@
 let containerColor = document.querySelector('.container-colors').children;
 
 // guardando color seleccionado en el localStorage
-setDateLS();
-function setDateLS() {
+setDataLS();
+function setDataLS() {
     if (localStorage.getItem('color') === null) {
         localStorage.setItem('color', '');
     }
@@ -52,7 +52,7 @@ function setDateLS() {
         });
     }
 }
-// seleccionando y indicandole al usuario que ha dado click en el btn. Esta configuración debe de quedarse guardado en el localStorage
+// seleccionando y indicandole al usuario que ha dado click en el color deseado y inmediatamente este color se le va aplicar a toda la configuración de la app. Esta configuración debe de quedarse guardado en el localStorage
 selecctionColorBtn();
 function selecctionColorBtn() {
     // color 1 "RebeccaPurple"
@@ -216,5 +216,12 @@ function selecctionColorBtn() {
         containerColor[9].classList.add('active');
     }
 }
-
+// Acción para mostrar la paleta de colores al dar click en el btn redondo
+showPaetteColors();
+function showPaetteColors() {
+    let containerColor = document.querySelector('.container-colors');
+    containerColor.addEventListener('click', () => {
+        containerColor.classList.toggle('active');
+    });
+}
 
