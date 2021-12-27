@@ -110,7 +110,9 @@
 }
 
 .container-chronometer .container-buttons {
-  place-self: center;
+  justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -127,9 +129,9 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
   grid-column: 1/9;
-  -ms-grid-row: 7;
-  -ms-grid-row-span: 1;
-  grid-row: 7/8;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  grid-row: 5/8;
 }
 
 .container-chronometer .container-buttons svg {
@@ -242,6 +244,14 @@
 }
 
 @media (max-width: 500px) {
+  .container-chronometer {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1/9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    grid-row: 2/5;
+  }
   .container-chronometer .container-accountant-chronometer .content-accountant-chronometer {
     place-items: center;
     margin-top: 25px;

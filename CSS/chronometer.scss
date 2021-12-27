@@ -79,7 +79,8 @@
 		}
 	}
 	.container-buttons {
-		place-self: center;
+		justify-self: center;
+		align-self: flex-start;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
@@ -87,7 +88,7 @@
 
 		display: flex;
 		grid-column: 1/9;
-		grid-row: 7/8;
+		grid-row: 5/8;
 		svg {
 			margin: 0 50px;
 			box-shadow: 0 0 10px #00000040;
@@ -180,6 +181,8 @@
 
 @media (max-width: 500px) {
 	.container-chronometer {
+		grid-column: 1/9;
+		grid-row: 2/5;
 		.container-accountant-chronometer {
 			.content-accountant-chronometer {
 				place-items: center;
