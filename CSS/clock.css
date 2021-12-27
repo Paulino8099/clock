@@ -50,14 +50,16 @@
   display: flex;
 }
 
-.container-clock .container-accountant-clock .content-accountant-clock .hours-clock {
+.container-clock .container-accountant-clock .content-accountant-clock .hours-clock,
+.container-clock .container-accountant-clock .content-accountant-clock .minutes-clock,
+.container-clock .container-accountant-clock .content-accountant-clock .seconds-clock {
   font-size: 5rem;
   font-weight: 900;
   text-align: center;
   padding: 40px;
   border-radius: 50%;
-  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  -webkit-box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+          box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
 }
 
 .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock {
@@ -78,16 +80,6 @@
   background: var(--color_white);
 }
 
-.container-clock .container-accountant-clock .content-accountant-clock .minutes-clock {
-  font-size: 5rem;
-  font-weight: 900;
-  text-align: center;
-  padding: 40px;
-  border-radius: 50%;
-  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-}
-
 .container-clock .container-accountant-clock .content-accountant-clock .points-seconds-clock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,16 +96,6 @@
   border-radius: 50%;
   margin: 10px;
   background: var(--color_white);
-}
-
-.container-clock .container-accountant-clock .content-accountant-clock .seconds-clock {
-  font-size: 5rem;
-  font-weight: 900;
-  text-align: center;
-  padding: 40px;
-  border-radius: 50%;
-  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
 }
 
 .container-clock .container-date {
@@ -166,40 +148,18 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .container-clock .container-accountant-clock .content-accountant-clock .hours-clock {
+  .container-clock .container-accountant-clock .content-accountant-clock .hours-clock,
+  .container-clock .container-accountant-clock .content-accountant-clock .minutes-clock,
+  .container-clock .container-accountant-clock .content-accountant-clock .seconds-clock {
     font-size: 4rem;
     font-weight: 900;
     text-align: center;
     padding: 15px;
     border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+    -webkit-box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
   }
-  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock span {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin: 10px;
-    background: var(--color_white);
-  }
-  .container-clock .container-accountant-clock .content-accountant-clock .minutes-clock {
-    font-size: 4rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 15px;
-    border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-  }
+  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock,
   .container-clock .container-accountant-clock .content-accountant-clock .points-seconds-clock {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -209,21 +169,13 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock span,
   .container-clock .container-accountant-clock .content-accountant-clock .points-seconds-clock span {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     margin: 10px;
     background: var(--color_white);
-  }
-  .container-clock .container-accountant-clock .content-accountant-clock .seconds-clock {
-    font-size: 4rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 15px;
-    border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
   }
   .container-clock .container-date {
     font-size: 1.5rem;
@@ -276,40 +228,18 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .container-clock .container-accountant-clock .content-accountant-clock .hours-clock {
+  .container-clock .container-accountant-clock .content-accountant-clock .hours-clock,
+  .container-clock .container-accountant-clock .content-accountant-clock .minutes-clock,
+  .container-clock .container-accountant-clock .content-accountant-clock .seconds-clock {
     font-size: 3rem;
     font-weight: 900;
     text-align: center;
     padding: 15px;
     border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+    -webkit-box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
   }
-  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock span {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin: 10px;
-    background: var(--color_white);
-  }
-  .container-clock .container-accountant-clock .content-accountant-clock .minutes-clock {
-    font-size: 3rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 15px;
-    border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-  }
+  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock,
   .container-clock .container-accountant-clock .content-accountant-clock .points-seconds-clock {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -319,21 +249,13 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .container-clock .container-accountant-clock .content-accountant-clock .points-first-clock span,
   .container-clock .container-accountant-clock .content-accountant-clock .points-seconds-clock span {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     margin: 10px;
     background: var(--color_white);
-  }
-  .container-clock .container-accountant-clock .content-accountant-clock .seconds-clock {
-    font-size: 3rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 15px;
-    border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
   }
   .container-clock .container-date {
     font-size: 1.5rem;

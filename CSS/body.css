@@ -41,6 +41,8 @@ body {
 }
 
 body .container {
+  -webkit-box-shadow: 0 0 25px #ffffff40;
+          box-shadow: 0 0 25px #ffffff40;
   border-radius: 5px;
   background: var(--color_grey2);
   width: 80%;
@@ -143,8 +145,8 @@ body .container .container-colors {
 }
 
 body .container .container-colors span {
-  -webkit-box-shadow: 0 0 15px #00000090;
-          box-shadow: 0 0 15px #00000090;
+  -webkit-box-shadow: 0 0 10px #00000080;
+          box-shadow: 0 0 10px #00000080;
   margin: 5px;
   z-index: 100;
   width: 25px;
@@ -245,8 +247,8 @@ body .container .container-colors span.active {
     grid-row: 8/9;
   }
   body .container .container-colors span {
-    -webkit-box-shadow: 0 0 15px #00000090;
-            box-shadow: 0 0 15px #00000090;
+    -webkit-box-shadow: 0 0 10px #00000080;
+            box-shadow: 0 0 10px #00000080;
     margin: 5px;
     z-index: 100;
     width: 25px;

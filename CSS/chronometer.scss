@@ -40,7 +40,7 @@
 				text-align: center;
 				padding: 40px;
 				border-radius: 50%;
-				box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+				box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
 			}
             .miliSeconds-chronometer {
                 position: relative;
@@ -51,7 +51,7 @@
 				text-align: center;
 				padding: 5px 12px;
 				border-radius: 50%;
-				box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+				box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
                 align-self: flex-end;
                 &::before {
                     content: "";
@@ -123,7 +123,9 @@
 				margin-top: 25px;
 
 				display: flex;
-				.hours-chronometer {
+				.hours-chronometer,
+				.minutes-chronometer,
+				.seconds-chronometer {
 					font: {
 						size: 4rem;
 						weight: 900;
@@ -133,27 +135,7 @@
 					border-radius: 50%;
 					box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
 				}
-				.points-first-chronometer {
-					display: flex;
-					flex-direction: column;
-					span {
-						width: 25px;
-						height: 25px;
-						border-radius: 50%;
-						margin: 10px;
-						background: var(--color_white);
-					}
-				}
-				.minutes-chronometer {
-					font: {
-						size: 4rem;
-						weight: 900;
-					}
-					text-align: center;
-					padding: 20px;
-					border-radius: 50%;
-					box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-				}
+				.points-first-chronometer,
 				.points-seconds-chronometer {
 					display: flex;
 					flex-direction: column;
@@ -164,16 +146,6 @@
 						margin: 10px;
 						background: var(--color_white);
 					}
-				}
-				.seconds-chronometer {
-					font: {
-						size: 4rem;
-						weight: 900;
-					}
-					text-align: center;
-					padding: 20px;
-					border-radius: 50%;
-					box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
 				}
 			}
 		}
@@ -214,6 +186,7 @@
 				margin-top: 25px;
 
 				display: flex;
+				// hours, minutes & seconds 
 				.hours-chronometer,
 				.minutes-chronometer,
 				.seconds-chronometer {
@@ -224,19 +197,7 @@
 					text-align: center;
 					padding: 5px;
 					border-radius: 50%;
-					box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-				}
-				.points-first-chronometer,
-				.points-seconds-chronometer {
-					display: flex;
-					flex-direction: column;
-					span {
-						width: 12px;
-						height: 12px;
-						border-radius: 50%;
-						margin: 8px;
-						background: var(--color_white);
-					}
+					box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
 				}
 				// miliSeconds
 				.miliSeconds-chronometer {
@@ -249,7 +210,7 @@
 					padding: 5px 12px;
 					margin-left: 5px;
 					border-radius: 50%;
-					box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+					box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
 					align-self: flex-end;
 					&::before {
 						content: "";
@@ -260,6 +221,19 @@
 						left: -10px;
 						bottom: 0;
 						border-radius: 50%;
+					}
+				}
+				// points
+				.points-first-chronometer,
+				.points-seconds-chronometer {
+					display: flex;
+					flex-direction: column;
+					span {
+						width: 12px;
+						height: 12px;
+						border-radius: 50%;
+						margin: 8px;
+						background: var(--color_white);
 					}
 				}
 			}

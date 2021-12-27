@@ -61,8 +61,8 @@
   text-align: center;
   padding: 40px;
   border-radius: 50%;
-  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  -webkit-box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+          box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
 }
 
 .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .miliSeconds-chronometer {
@@ -72,8 +72,8 @@
   text-align: center;
   padding: 5px 12px;
   border-radius: 50%;
-  -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-          box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+  -webkit-box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+          box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -175,7 +175,9 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .hours-chronometer {
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .hours-chronometer,
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .minutes-chronometer,
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .seconds-chronometer {
     font-size: 4rem;
     font-weight: 900;
     text-align: center;
@@ -184,31 +186,7 @@
     -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
             box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
   }
-  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer span {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    margin: 10px;
-    background: var(--color_white);
-  }
-  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .minutes-chronometer {
-    font-size: 4rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 20px;
-    border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer,
   .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -218,21 +196,13 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer span,
   .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer span {
     width: 25px;
     height: 25px;
     border-radius: 50%;
     margin: 10px;
     background: var(--color_white);
-  }
-  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .seconds-chronometer {
-    font-size: 4rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 20px;
-    border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
   }
   .container-chronometer .container-buttons {
     place-self: center;
@@ -287,8 +257,31 @@
     text-align: center;
     padding: 5px;
     border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
+    -webkit-box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .miliSeconds-chronometer {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px 12px;
+    margin-left: 5px;
+    border-radius: 50%;
+    -webkit-box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+            box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .miliSeconds-chronometer::before {
+    content: "";
+    background: var(--color_white);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    border-radius: 50%;
   }
   .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-first-chronometer,
   .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .points-seconds-chronometer {
@@ -307,29 +300,6 @@
     border-radius: 50%;
     margin: 8px;
     background: var(--color_white);
-  }
-  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .miliSeconds-chronometer {
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-    padding: 5px 12px;
-    margin-left: 5px;
-    border-radius: 50%;
-    -webkit-box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-            box-shadow: -4px -4px 10px #ffffff90, 4px 4px 10px #00000050;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
-  .container-chronometer .container-accountant-chronometer .content-accountant-chronometer .miliSeconds-chronometer::before {
-    content: "";
-    background: var(--color_white);
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    left: -10px;
-    bottom: 0;
-    border-radius: 50%;
   }
   .container-chronometer .container-buttons svg {
     margin: 0 25px;

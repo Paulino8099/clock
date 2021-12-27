@@ -42,6 +42,7 @@ function getTime() {
     }
     if (time.getHours() > 12) {
         hours.innerHTML = `0${time.getHours() - 12}`;
+        // si el contador horas marca un número mayor a 10 se le va a retirar el 0
         if (time.getHours() > 10) {
             hours.innerHTML = `${time.getHours() - 12}`;
         }

@@ -38,6 +38,7 @@ body {
 
 	display: grid;
 	.container {
+        box-shadow: 0 0 25px #ffffff40;
 		border-radius: 5px;
 		background: var(--color_grey2);
 		width: 80%;
@@ -110,7 +111,7 @@ body {
 			grid-column: 1/2;
 			grid-row: 1/9;
 			span {
-                box-shadow: 0 0 15px #00000090;
+                box-shadow: 0 0 10px #00000080;
 				margin: 5px;
 				z-index: 100;
 				width: 25px;
@@ -188,7 +189,7 @@ body {
                 grid-column: 1/9;
                 grid-row: 8/9;
                 span {
-                    box-shadow: 0 0 15px #00000090;
+                    box-shadow: 0 0 10px #00000080;
                     margin: 5px;
                     z-index: 100;
                     width: 25px;
