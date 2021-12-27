@@ -40,6 +40,12 @@ function getTime() {
     } else {
         hours.innerHTML = time.getHours();
     }
+    if (time.getHours() > 12) {
+        hours.innerHTML = `0${time.getHours() - 12}`;
+        if (time.getHours() > 10) {
+            hours.innerHTML = `${time.getHours() - 12}`;
+        }
+    }
 
     // minutes
     if (time.getMinutes() <= 9) {
@@ -92,7 +98,7 @@ function getDate() {
     }
 
     // Cambiando el número del mes por su respectivo nombre del mes 
-    changingMonth ();
+    changingMonth();
     function changingMonth() {
         if (month == 0) {
             month = 'January';
