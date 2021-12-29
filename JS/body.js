@@ -242,22 +242,3 @@ function showPaetteColors() {
         }
     }
 }
-
-// let containerColor2 = document.querySelector('.container-colors');
-
-// function onDrag({ movementY }) {
-//     const navStyle = window.getComputedStyle(containerColor2), //tomando todos los estilos de "containerColor"
-//         navTop = parseInt(navStyle.top), //tomando el margen superior de
-//         navHeight = parseInt(navStyle.height), //tomando el ancho de los estilos de "containerColor"
-//         winHeight = window.innerHeight; //tomando el ancho de toda la ventana
-
-//     containerColor2.style.top = navTop > 2 ? `${navTop + movementY}px` : "1px";
-
-//     console.log(movementY);
-// }
-
-// let container = document.querySelector('.container');
-
-// container.addEventListener('mousedown', () => {
-//     container.addEventListener('mousemove', onDrag);
-// });
