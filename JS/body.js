@@ -217,8 +217,8 @@ function selecctionColorBtn() {
     }
 }
 // Acción para mostrar u ocultar la paleta de colores al dar click en el btn redondo contenedoras de todos los colores 
-showPaetteColors();
-function showPaetteColors() {
+showPaletteColors();
+function showPaletteColors() {
     let containerColor1 = document.querySelector('.container-colors');
     containerColor1.addEventListener('click', () => {
         containerColor1.classList.toggle('active');

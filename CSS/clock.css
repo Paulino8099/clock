@@ -2,10 +2,10 @@
   width: 90%;
   height: 100%;
   place-self: center;
-  -webkit-transition: .5s linear, opacity .3s;
-  transition: .5s linear, opacity .3s;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(100%) scale(0.1);
+          transform: translateX(100%) scale(0.1);
+  -webkit-transition: 0.7s cubic-bezier(0, -0.14, 0.02, 1.13), opacity 0.3s;
+  transition: 0.7s cubic-bezier(0, -0.14, 0.02, 1.13), opacity 0.3s;
   opacity: 0;
   pointer-events: 0;
   display: -ms-grid;
@@ -23,8 +23,8 @@
 }
 
 .container-clock.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(0) scale(1);
+          transform: translateX(0) scale(1);
   opacity: 1;
   pointer-events: visible;
 }

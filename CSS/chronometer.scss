@@ -2,8 +2,8 @@
 	place-self: center;
 	width: 90%;
 	height: 100%;
-    transition: .5s linear, opacity .3s;
-	transform: translateX(-100%);
+	transform: translateX(-100%) scale(0.1);
+	transition: .7s cubic-bezier(0,-0.14,.02,1.13), opacity .3s;
 	opacity: 0;
 	pointer-events: none;
 
@@ -13,7 +13,7 @@
 	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(8, auto);
 	&.active {
-		transform: translateX(0);
+		transform: translateX(0) scale(1);
 		opacity: 1;
 		pointer-events: visible;
 	}
@@ -109,9 +109,8 @@
 			&.active {
 				transform: scale(1.2);
 				pointer-events: none;
-				opacity: .8;
-				box-shadow: 0 0 10px #fff;
-				background: var(--color_grey1);
+				opacity: 1;
+				box-shadow: 0 0 10px #ffffff;
 			}
 		}
 	}
@@ -250,13 +249,14 @@
 				transition: .3s;
 				&:hover {
 					opacity: 1;
-					box-shadow: 0 0 10px #00000040;
+					box-shadow: none;
 					cursor: pointer;
 				}
-				&:active {
-					transition: .3s;
-					opacity: .5;
-					box-shadow: 0 0 10px #00000040;
+				&.active {
+					transform: scale(1.2);
+					pointer-events: none;
+					opacity: 1;
+					box-shadow: 0 0 10px #ffffff;
 				}
 			}
 		}
