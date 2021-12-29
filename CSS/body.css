@@ -146,27 +146,23 @@ body .container .container-colors {
   background: transparent;
   -webkit-box-shadow: 0 0 10px #ffffff90;
           box-shadow: 0 0 10px #ffffff90;
-  position: absolute;
-  place-self: flex-end;
   margin: 10px;
-  z-index: 200;
+  z-index: 250;
   width: 25px;
+  position: fixed;
   height: 25px;
   border-radius: 50%;
   cursor: pointer;
   outline: 2px solid #fff;
   -webkit-transition: .5s;
   transition: .5s;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 8;
-  grid-column: 1/9;
-  -ms-grid-row: 8;
-  -ms-grid-row-span: 1;
-  grid-row: 8/9;
+  right: 5px;
+  top: 50%;
 }
 
 body .container .container-colors.active {
-  margin: 0 55px 55px 0;
+  right: 55px;
+  top: 55%;
 }
 
 body .container .container-colors.active span {
@@ -271,8 +267,6 @@ body .container .container-colors span.active {
     background: transparent;
     -webkit-box-shadow: 0 0 10px #ffffff90;
             box-shadow: 0 0 10px #ffffff90;
-    position: absolute;
-    place-self: flex-end;
     margin: 10px;
     z-index: 200;
     width: 25px;
@@ -282,16 +276,10 @@ body .container .container-colors span.active {
     outline: 2px solid #fff;
     -webkit-transition: .5s;
     transition: .5s;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
-    grid-column: 1/9;
-    -ms-grid-row: 8;
-    -ms-grid-row-span: 1;
-    grid-row: 8/9;
   }
   body .container .container-colors.active {
-    margin: 0 50px 55px 0;
-    margin-bottom: 200px;
+    right: 55px;
+    top: 62%;
   }
   body .container .container-colors.active span {
     opacity: 1;

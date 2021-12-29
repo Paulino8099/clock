@@ -113,21 +113,20 @@ body {
 		.container-colors {
 			background: transparent;
 			box-shadow: 0 0 10px #ffffff90;
-			position: absolute;
-			place-self: flex-end;
 			margin: 10px;
-			z-index: 200;
+			z-index: 250;
 			width: 25px;
+			position: fixed;
 			height: 25px;
 			border-radius: 50%;
 			cursor: pointer;
 			outline: 2px solid #fff;
 			transition: .5s;
-
-			grid-column: 1/9;
-			grid-row: 8/9;
+			right: 5px;
+			top: 50%;
 			&.active {
-				margin: 0 55px 55px 0;
+				right: 55px;
+				top: 55%;
 				span {
 					opacity: 1;
 					pointer-events: visible;
@@ -215,8 +214,6 @@ body {
 			.container-colors {
 				background: transparent;
 				box-shadow: 0 0 10px #ffffff90;
-				position: absolute;
-				place-self: flex-end;
 				margin: 10px;
 				z-index: 200;
 				width: 25px;
@@ -225,12 +222,9 @@ body {
 				cursor:pointer;
 				outline: 2px solid #fff;
 				transition: .5s;
-
-				grid-column: 1/9;
-				grid-row: 8/9;
 				&.active {
-					margin: 0 50px 55px 0;
-					margin-bottom: 200px;
+					right: 55px;
+					top: 62%;
 					span {
 						opacity: 1;
 						pointer-events: visible;
