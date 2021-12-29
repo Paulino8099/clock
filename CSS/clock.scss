@@ -1,37 +1,35 @@
-
-
 .container-clock {
-    width: 90%;
-    height: 100%;
-    place-self: center;
-    transition: .5s linear, opacity .3s;
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: 0;
+	width: 90%;
+	height: 100%;
+	place-self: center;
+	transition: .5s linear, opacity .3s;
+	transform: translateX(100%);
+	opacity: 0;
+	pointer-events: 0;
 
-    display: grid;
-    grid-column: 1/9;
-    grid-row: 2/8;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, auto);
-    &.active {
-        transform: translateX(0);
-        opacity: 1;
-        pointer-events: visible;
-    }
-    .container-accountant-clock {
-        place-items: center;
+	display: grid;
+	grid-column: 1/9;
+	grid-row: 2/8;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, auto);
+	&.active {
+		transform: translateX(0);
+		opacity: 1;
+		pointer-events: visible;
+	}
+	.container-accountant-clock {
+		place-items: center;
 
-        display: grid;
-        grid-column: 1/9;
-        grid-row: 1/7;
-        .content-accountant-clock {
-            align-items: center;
+		display: grid;
+		grid-column: 1/9;
+		grid-row: 1/7;
+		.content-accountant-clock {
+			align-items: center;
 
-            display: flex;
+			display: flex;
 			.hours-clock,
-            .minutes-clock,
-            .seconds-clock {
+			.minutes-clock,
+			.seconds-clock {
 				font: {
 					size: 5rem;
 					weight: 900;
@@ -41,17 +39,7 @@
 				border-radius: 50%;
 				box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
 			}
-			.points-first-clock {
-				display: flex;
-				flex-direction: column;
-				span {
-					width: 25px;
-					height: 25px;
-					border-radius: 50%;
-					margin: 10px;
-					background: var(--color_white);
-				}
-			}
+			.points-first-clock,
 			.points-seconds-clock {
 				display: flex;
 				flex-direction: column;
@@ -63,130 +51,142 @@
 					background: var(--color_white);
 				}
 			}
-        }
-    }
-    .container-date {
-        font-size: 1.5rem;
-        place-self: center;
-        display: grid;
-        grid-column: 1/9;
-        grid-row: 7/9;
-    }
+			.am-pm {
+				color: var(--color_white);
+				align-self: flex-end;
+                font-size: 1.5rem;
+			}
+		}
+	}
+	.container-date {
+		font-size: 1.5rem;
+		place-self: center;
+		display: grid;
+		grid-column: 1/9;
+		grid-row: 7/9;
+	}
 }
 
 @media (max-width: 675px) {
+	.container-clock {
+		width: 90%;
+		height: 100%;
+		place-self: center;
 
-    .container-clock {
-        width: 90%;
-        height: 100%;
-        place-self: center;
-    
-        display: grid;
-        grid-column: 1/9;
-        grid-row: 2/8;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, auto);
-        .container-accountant-clock {
-            place-items: center;
-    
-            display: grid;
-            grid-column: 1/9;
-            grid-row: 1/7;
-            .content-accountant-clock {
-                align-items: center;
-    
-                display: flex;
-                .hours-clock,
-                .minutes-clock,
-                .seconds-clock {
-                    font: {
-                        size: 4rem;
-                        weight: 900;
-                    }
-                    text-align: center;
-                    padding:15px;
-                    border-radius: 50%;
-                    box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
-                }
-                .points-first-clock,
-                .points-seconds-clock {
-                    display: flex;
-                    flex-direction: column;
-                    span {
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 50%;
-                        margin: 10px;
-                        background: var(--color_white);
-                    }
-                }
-            }
-        }
-        .container-date {
-            font-size: 1.5rem;
-            place-self: center;
-            display: grid;
-            grid-column: 1/9;
-            grid-row: 7/9;
-        }
-    }
+		display: grid;
+		grid-column: 1/9;
+		grid-row: 2/8;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(8, auto);
+		.container-accountant-clock {
+			place-items: center;
+
+			display: grid;
+			grid-column: 1/9;
+			grid-row: 1/7;
+			.content-accountant-clock {
+				align-items: center;
+
+				display: flex;
+				.hours-clock,
+				.minutes-clock,
+				.seconds-clock {
+					font: {
+						size: 4rem;
+						weight: 900;
+					}
+					text-align: center;
+					padding: 15px;
+					border-radius: 50%;
+					box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+				}
+				.points-first-clock,
+				.points-seconds-clock {
+					display: flex;
+					flex-direction: column;
+					span {
+						width: 15px;
+						height: 15px;
+						border-radius: 50%;
+						margin: 10px;
+						background: var(--color_white);
+					}
+				}
+			}
+		}
+		.container-date {
+			font-size: 1.5rem;
+			place-self: center;
+			display: grid;
+			grid-column: 1/9;
+			grid-row: 7/9;
+		}
+	}
 }
 
 @media (max-width: 425px) {
+	.container-clock {
+		width: 90%;
+		height: 100%;
+		place-self: center;
 
-    .container-clock {
-        width: 90%;
-        height: 100%;
-        place-self: center;
-    
-        display: grid;
-        grid-column: 1/9;
-        grid-row: 2/8;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, auto);
-        .container-accountant-clock {
-            place-items: center;
-    
-            display: grid;
-            grid-column: 1/9;
-            grid-row: 1/7;
-            .content-accountant-clock {
-                align-items: center;
-    
-                display: flex;
-                .hours-clock,
-                .minutes-clock,
-                .seconds-clock {
-                    font: {
-                        size: 3rem;
-                        weight: 900;
-                    }
-                    text-align: center;
-                    padding: 15px;
-                    border-radius: 50%;
-                    box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+		display: grid;
+		grid-column: 1/9;
+		grid-row: 2/8;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(8, auto);
+		.container-accountant-clock {
+			place-items: center;
+
+			display: grid;
+			grid-column: 1/9;
+			grid-row: 1/7;
+			.content-accountant-clock {
+				align-items: center;
+                position: relative;
+
+				display: flex;
+				.hours-clock,
+				.minutes-clock,
+				.seconds-clock {
+					font: {
+						size: 3rem;
+						weight: 900;
+					}
+					text-align: center;
+					padding: 15px;
+					border-radius: 50%;
+					box-shadow: -4px -4px 10px #ffffff50, 4px 4px 10px #00000050;
+				}
+				.points-first-clock,
+				.points-seconds-clock {
+					display: flex;
+					flex-direction: column;
+					span {
+						width: 15px;
+						height: 15px;
+						border-radius: 50%;
+						margin: 10px;
+						background: var(--color_white);
+					}
+				}
+                .am-pm {
+                    color: var(--color_white);
+                    font-size: 1rem;
+                    position: absolute;
+                    top: 85%;
+                    z-index: 250;
+                    left: 95%;
                 }
-                .points-first-clock,
-                .points-seconds-clock {
-                    display: flex;
-                    flex-direction: column;
-                    span {
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 50%;
-                        margin: 10px;
-                        background: var(--color_white);
-                    }
-                }
-            }
-        }
-        .container-date {
-            text-align: center;
-            font-size: 1.5rem;
-            place-self: center;
-            display: grid;
-            grid-column: 1/9;
-            grid-row: 7/9;
-        }
-    }
+			}
+		}
+		.container-date {
+			text-align: center;
+			font-size: 1.5rem;
+			place-self: center;
+			display: grid;
+			grid-column: 1/9;
+			grid-row: 7/9;
+		}
+	}
 }

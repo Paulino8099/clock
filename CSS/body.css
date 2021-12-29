@@ -276,6 +276,7 @@ body .container .container-colors span.active {
     outline: 2px solid #fff;
     -webkit-transition: .5s;
     transition: .5s;
+    top: 60%;
   }
   body .container .container-colors.active {
     right: 55px;

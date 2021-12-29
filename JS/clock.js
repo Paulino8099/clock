@@ -29,12 +29,18 @@ function activeClock() {
 // hora
 getTime();
 function getTime() {
+    let am_pm = document.querySelector('body .container .container-clock .am-pm');
+
     let hours = document.querySelector('.hours-clock');
     let minutes = document.querySelector('.minutes-clock');
     let seconds = document.querySelector('.seconds-clock');
     let time = new Date();
     let timeHours = time.getHours();
 
+    // am-pm ||| SI el contador "hora" detecta un número mayor a 12 se marcará "pm"
+    if (timeHours >= 12) {
+        am_pm.innerHTML = '.pm';
+    }
     // hours
     // Cuando el contador de horas registre un número mayor a 12 al contador "horas" se le restrá 12
     if (timeHours > 12) {
