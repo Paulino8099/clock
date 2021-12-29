@@ -4,7 +4,7 @@
     width: 90%;
     height: 100%;
     place-self: center;
-    transition: .5s linear;
+    transition: .5s linear, opacity .3s;
     transform: translateX(100%);
     opacity: 0;
     pointer-events: 0;
@@ -181,6 +181,7 @@
             }
         }
         .container-date {
+            text-align: center;
             font-size: 1.5rem;
             place-self: center;
             display: grid;

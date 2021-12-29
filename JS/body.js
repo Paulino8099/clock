@@ -73,7 +73,7 @@ function selecctionColorBtn() {
     }
     // color 2 "LimeGreen"
     if (localStorage.getItem('color') == 'LimeGreen') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#32cd32');
 
         containerColor[0].classList.remove('active');
@@ -89,7 +89,7 @@ function selecctionColorBtn() {
     }
     // color 3 "MediumSpringGreen"
     if (localStorage.getItem('color') == 'MediumSpringGreen') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#00fa9a');
 
         containerColor[0].classList.remove('active');
@@ -105,7 +105,7 @@ function selecctionColorBtn() {
     }
     // color 4 "LightSeaGreen"
     if (localStorage.getItem('color') == 'LightSeaGreen') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#20b2aa');
 
         containerColor[0].classList.remove('active');
@@ -121,7 +121,7 @@ function selecctionColorBtn() {
     }
     // color 5 "Yellow"
     if (localStorage.getItem('color') == 'Yellow') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#909008');
 
         containerColor[0].classList.remove('active');
@@ -137,7 +137,7 @@ function selecctionColorBtn() {
     }
     // color 6 "Chocolate"
     if (localStorage.getItem('color') == 'Chocolate') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#d2691e');
 
         containerColor[0].classList.remove('active');
@@ -153,7 +153,7 @@ function selecctionColorBtn() {
     }
     // color 7 "DarkSlateGray"
     if (localStorage.getItem('color') == 'DarkSlateGray') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#305050');
 
         containerColor[0].classList.remove('active');
@@ -169,7 +169,7 @@ function selecctionColorBtn() {
     }
     // color 8 "Crimson"
     if (localStorage.getItem('color') == 'Crimson') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#dc143c');
 
         containerColor[0].classList.remove('active');
@@ -185,7 +185,7 @@ function selecctionColorBtn() {
     }
     // color 9 "DeepPink"
     if (localStorage.getItem('color') == 'DeepPink') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#ff1493');
 
         containerColor[0].classList.remove('active');
@@ -201,7 +201,7 @@ function selecctionColorBtn() {
     }
     // color 10 "Tomato"
     if (localStorage.getItem('color') == 'Tomato') {
-        
+
         document.documentElement.style.setProperty('--color_grey2', '#ff6347');
 
         containerColor[0].classList.remove('active');
@@ -216,12 +216,48 @@ function selecctionColorBtn() {
         containerColor[9].classList.add('active');
     }
 }
-// Acción para mostrar la paleta de colores al dar click en el btn redondo
+// Acción para mostrar u ocultar la paleta de colores al dar click en el btn redondo contenedoras de todos los colores 
 showPaetteColors();
 function showPaetteColors() {
-    let containerColor = document.querySelector('.container-colors');
-    containerColor.addEventListener('click', () => {
-        containerColor.classList.toggle('active');
+    let containerColor1 = document.querySelector('.container-colors');
+    containerColor1.addEventListener('click', () => {
+        containerColor1.classList.toggle('active');
     });
+
+    // esconder paleta de colores al dar click en cualquiera de los botones del navBar y de los botones del cronometro
+    colorPalette();
+    function colorPalette() {
+        document.querySelector('.btn-chronometer').addEventListener('click', () => {
+            containerColor1.classList.remove('active');
+        });
+        document.querySelector('.btn-clock').addEventListener('click', () => {
+            containerColor1.classList.remove('active');
+        });
+        // botones del cronómetro
+        let BtnChronometer = document.querySelector('.container-buttons').children;
+        for (let i = 0; i < BtnChronometer.length; i++) {
+            BtnChronometer[i].addEventListener('click', () => {
+                containerColor1.classList.remove('active');
+            });
+        }
+    }
 }
 
+// let containerColor2 = document.querySelector('.container-colors');
+
+// function onDrag({ movementY }) {
+//     const navStyle = window.getComputedStyle(containerColor2), //tomando todos los estilos de "containerColor"
+//         navTop = parseInt(navStyle.top), //tomando el margen superior de
+//         navHeight = parseInt(navStyle.height), //tomando el ancho de los estilos de "containerColor"
+//         winHeight = window.innerHeight; //tomando el ancho de toda la ventana
+
+//     containerColor2.style.top = navTop > 2 ? `${navTop + movementY}px` : "1px";
+
+//     console.log(movementY);
+// }
+
+// let container = document.querySelector('.container');
+
+// container.addEventListener('mousedown', () => {
+//     container.addEventListener('mousemove', onDrag);
+// });

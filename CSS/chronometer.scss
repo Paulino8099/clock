@@ -2,7 +2,7 @@
 	place-self: center;
 	width: 90%;
 	height: 100%;
-	transition: .5s linear;
+    transition: .5s linear, opacity .3s;
 	transform: translateX(-100%);
 	opacity: 0;
 	pointer-events: none;

@@ -2,8 +2,8 @@
   width: 90%;
   height: 100%;
   place-self: center;
-  -webkit-transition: .5s linear;
-  transition: .5s linear;
+  -webkit-transition: .5s linear, opacity .3s;
+  transition: .5s linear, opacity .3s;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   opacity: 0;
@@ -258,6 +258,7 @@
     background: var(--color_white);
   }
   .container-clock .container-date {
+    text-align: center;
     font-size: 1.5rem;
     place-self: center;
     display: -ms-grid;
